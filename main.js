@@ -48,6 +48,7 @@ function toggleContent() {
 }
 
 
+
 document.addEventListener("DOMContentLoaded", function () {
   const revealElements = document.querySelectorAll(".owner-heading, .owner-description, .owner-quote");
 
@@ -68,3 +69,65 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //civil page
+//project heading sectio
+document.addEventListener("DOMContentLoaded", function () {
+  const projectsSection = document.querySelector(".c-projects");
+
+  function handleScroll() {
+      const sectionPosition = projectsSection.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.2;
+
+      if (sectionPosition < screenPosition) {
+          projectsSection.classList.add("show");
+      }
+  }
+
+  window.addEventListener("scroll", handleScroll);
+});
+
+//about section of civil
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutSection = document.querySelector(".c-about-container");
+
+  function revealOnScroll() {
+      const sectionTop = aboutSection.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (sectionTop < windowHeight - 100) {
+          aboutSection.classList.add("show");
+      }
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+});
+
+//project section
+document.addEventListener("DOMContentLoaded", function () {
+  const projects = document.querySelectorAll(".c-project");
+  let current_Index = 0;
+
+  function showProject(index) {
+      projects.forEach((project, i) => {
+          project.classList.remove("active");
+          if (i === index) {
+              project.classList.add("active");
+          }
+      });
+  }
+
+  document.querySelector(".c-arrow-left").addEventListener("click", function () {
+      current_Index = (current_Index === 0) ? projects.length - 1 : current_Index - 1;
+      showProject(current_Index);
+  });
+
+  document.querySelector(".c-arrow-right").addEventListener("click", function () {
+      current_Index = (current_Index === projects.length - 1) ? 0 : current_Index + 1;
+      showProject(current_Index);
+  });
+
+  // Show the first project initially
+  showProject(current_Index);
+});
+
+
