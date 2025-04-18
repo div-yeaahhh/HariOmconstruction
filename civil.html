@@ -34,35 +34,36 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="c-projects">
-        <div class="c-projects-heading">
-            <h2 class="c-projects-title"><span class="c-line"></span> PROJECTS WE HAVE DONE</h2>
-        </div>
-        <div class="c-projects-slider">
-            <button class="c-arrow c-arrow-left" onclick="prevProject()">&#10094;</button>
-            <div class="c-projects-container">
-                <div class="c-project" style="background-image: url('ps1\ \(1\).jpg');">
-                    <div class="c-project-info">
-                        <h3 class="c-project-title">Project Title 1</h3>
-                        <p class="c-project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, placeat. Voluptatem hic suscipit in, repudiandae dolorum magni non possimus nobis nemo culpa, iste iure cum eligendi, natus facilis omnis assumenda!Description of Project 1 with key achievements and impact.</p>
-                    </div>
-                </div>
-                <div class="c-project" style="background-image: url('ps2.jpg');">
-                    <div class="c-project-info">
-                        <h3 class="c-project-title">Project Title 2</h3>
-                        <p class="c-project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, debitis quos? Unde eveniet vero aliquid sunt at dolorem, voluptatem animi similique maiores dolore itaque nesciunt ipsa. Qui eius necessitatibus iure.Description of Project 2 with key achievements and impact.</p>
-                    </div>
-                </div>
-                <div class="c-project" style="background-image: url('ps3.jpg');">
-                    <div class="c-project-info">
-                        <h3 class="c-project-title">Project Title 3</h3>
-                        <p class="c-project-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, magnam cum nemo asperiores hic quasi. Voluptates totam alias voluptatibus sit nemo, eveniet neque provident quas similique commodi itaque doloribus adipisci.Description of Project 3 with key achievements and impact.</p>
-                    </div>
-                </div>
+    <section class="c-projects-section">
+        <div class="c-projects-overlay">
+          <h2 class="c-heading">Our Projects</h2>
+          <p class="c-subheading">From blueprints to reality — our finest work, just for you.</p>
+      
+          <div class="c-slider-container">
+            <div class="c-slider-content">
+              <!-- Project Image -->
+              <div class="c-slider-image">
+                <img id="project-image" src="civil1.jpg" alt="Project Image">
+              </div>
+      
+              <!-- Project Description -->
+              <div class="c-slider-text">
+                <h3 id="project-title">Skyline Apartments</h3>
+                <p id="project-location">Delhi • ₹2.5 Cr • Completed Jan 2024</p>
+                <p id="project-description">
+                  High-rise residential project with 32 flats and underground parking. Delivered within 8 months.
+                </p>
+              </div>
             </div>
-            <button class="c-arrow c-arrow-right" onclick="nextProject()">&#10095;</button>
+           
+            <!-- Navigation Arrows -->
+            <div class="c-slider-nav">
+              <button onclick="prevProject()">← Prev</button>
+              <button onclick="nextProject()">Next →</button>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
     <!-- Contact Us Section -->
     <section class="c-contact">
@@ -87,9 +88,6 @@
     </footer>
 
     </div>
-
-
-
 
     <script src="main.js"></script>
 </body>
