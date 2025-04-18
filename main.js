@@ -103,31 +103,64 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //project section
-document.addEventListener("DOMContentLoaded", function () {
-  const projects = document.querySelectorAll(".c-project");
-  let current_Index = 0;
+// const projects = [
+//   {
+//     title: "Skyline Apartments",
+//     location: "Delhi • ₹2.5 Cr • Completed Jan 2024",
+//     description: "High-rise residential project with 32 flats and underground parking. Delivered within 8 months.",
+//     image: "images/project1.jpg"
+//   },
+//   {
+//     title: "Green Villa",
+//     location: "Jaipur • ₹1.8 Cr • Completed Aug 2023",
+//     description: "Eco-friendly bungalow project with smart lighting and rainwater harvesting system.",
+//     image: "images/project2.jpg"
+//   },
+//   {
+//     title: "Central Plaza",
+//     location: "Mumbai • ₹4 Cr • Completed Nov 2023",
+//     description: "Commercial building project with 10 office floors, central AC, and basement parking.",
+//     image: "images/project3.jpg"
+//   }
+// ];
 
-  function showProject(index) {
-      projects.forEach((project, i) => {
-          project.classList.remove("active");
-          if (i === index) {
-              project.classList.add("active");
-          }
-      });
-  }
+// let currentIndex = 0;
 
-  document.querySelector(".c-arrow-left").addEventListener("click", function () {
-      current_Index = (current_Index === 0) ? projects.length - 1 : current_Index - 1;
-      showProject(current_Index);
-  });
+// function showProject(index) {
+//   const project = projects[index];
+//   document.getElementById("project-title").innerText = project.title;
+//   document.getElementById("project-location").innerText = project.location;
+//   document.getElementById("project-description").innerText = project.description;
+//   document.getElementById("project-image").src = project.image;
+// }
 
-  document.querySelector(".c-arrow-right").addEventListener("click", function () {
-      current_Index = (current_Index === projects.length - 1) ? 0 : current_Index + 1;
-      showProject(current_Index);
-  });
+// function nextProject() {
+//   currentIndex = (currentIndex + 1) % projects.length;
+//   showProject(currentIndex);
+// }
 
-  // Show the first project initially
-  showProject(current_Index);
+// function prevProject() {
+//   currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+//   showProject(currentIndex);
+// }
+
+// // Init
+// showProject(currentIndex);
+
+//owner Section
+// When the section scrolls into view, add 'visible' class
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
 });
+
 
 
