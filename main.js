@@ -102,50 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
   revealOnScroll();
 });
 
-//project section
-// const projects = [
-//   {
-//     title: "Skyline Apartments",
-//     location: "Delhi • ₹2.5 Cr • Completed Jan 2024",
-//     description: "High-rise residential project with 32 flats and underground parking. Delivered within 8 months.",
-//     image: "images/project1.jpg"
-//   },
-//   {
-//     title: "Green Villa",
-//     location: "Jaipur • ₹1.8 Cr • Completed Aug 2023",
-//     description: "Eco-friendly bungalow project with smart lighting and rainwater harvesting system.",
-//     image: "images/project2.jpg"
-//   },
-//   {
-//     title: "Central Plaza",
-//     location: "Mumbai • ₹4 Cr • Completed Nov 2023",
-//     description: "Commercial building project with 10 office floors, central AC, and basement parking.",
-//     image: "images/project3.jpg"
-//   }
-// ];
 
-// let currentIndex = 0;
-
-// function showProject(index) {
-//   const project = projects[index];
-//   document.getElementById("project-title").innerText = project.title;
-//   document.getElementById("project-location").innerText = project.location;
-//   document.getElementById("project-description").innerText = project.description;
-//   document.getElementById("project-image").src = project.image;
-// }
-
-// function nextProject() {
-//   currentIndex = (currentIndex + 1) % projects.length;
-//   showProject(currentIndex);
-// }
-
-// function prevProject() {
-//   currentIndex = (currentIndex - 1 + projects.length) % projects.length;
-//   showProject(currentIndex);
-// }
-
-// // Init
-// showProject(currentIndex);
 
 //owner Section
 // When the section scrolls into view, add 'visible' class
@@ -163,4 +120,133 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+//PROJECT SECTION
+document.addEventListener('DOMContentLoaded', function () {
+  // Array of projects (add your actual project details here)
+  const projects = [
+      {
+          title: "Skyline Apartments",
+          location: "Delhi • ₹2.5 Cr • Completed Jan 2024",
+          description: "High-rise residential project with 32 flats and underground parking. Delivered within 8 months.",
+          image: "civil1.jpg"
+      },
+      {
+          title: "Green Park Towers",
+          location: "Mumbai • ₹3.2 Cr • Completed Dec 2023",
+          description: "Sustainable high-rise tower with eco-friendly amenities, green roofs, and solar panels.",
+          image: "civil2.jpg"
+      },
+      {
+          title: "Riverfront Mall",
+          location: "Kolkata • ₹5 Cr • Completed Nov 2022",
+          description: "A state-of-the-art commercial complex with high-end retail outlets and parking.",
+          image: "civil3.jpg"
+      }
+      // Add more projects as needed
+  ];
 
+  let currentProjectIndex = 0;
+
+  // Function to update the project display
+  function updateProject() {
+      const project = projects[currentProjectIndex];
+
+      // Update project title
+      document.querySelector('.c-slider-text h3').textContent = project.title;
+      // Update project location
+      document.querySelector('#project-location').textContent = project.location;
+      // Update project description
+      document.querySelector('#project-description').textContent = project.description;
+      // Update project image
+      document.querySelector('#project-image').src = project.image;
+  }
+
+  // Function to go to the previous project
+  function prevProject() {
+      currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
+      updateProject();
+  }
+
+  // Function to go to the next project
+  function nextProject() {
+      currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+      updateProject();
+  }
+
+  // Event listeners for buttons
+  document.querySelector('.c-previous-btn').addEventListener('click', prevProject);
+  document.querySelector('.c-next-btn').addEventListener('click', nextProject);
+
+  // Initialize the first project
+  updateProject();
+});
+
+
+//TOWERLINE
+
+document.addEventListener('DOMContentLoaded', function () {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const animatedElements = document.querySelectorAll('.t-about-container');
+  animatedElements.forEach(el => observer.observe(el));
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Towerline-specific projects
+  const tProjects = [
+      {
+          title: "Skyline Apartments",
+          location: "Delhi • ₹2.5 Cr • Completed Jan 2024",
+          description: "High-rise residential project with 32 flats and underground parking. Delivered within 8 months.",
+          image: "T7.jpg"
+      },
+      {
+          title: "Green Park Towers",
+          location: "Mumbai • ₹3.2 Cr • Completed Dec 2023",
+          description: "Sustainable high-rise tower with eco-friendly amenities, green roofs, and solar panels.",
+          image: "T1.jpg"
+      },
+      {
+          title: "Riverfront Mall",
+          location: "Kolkata • ₹5 Cr • Completed Nov 2022",
+          description: "A state-of-the-art commercial complex with high-end retail outlets and parking.",
+          image: "T2.jpg"
+      }
+      // Add more Towerline projects here if needed
+  ];
+
+  let tCurrentProjectIndex = 0;
+
+  function updateTProject() {
+      const project = tProjects[tCurrentProjectIndex];
+
+      // Update Towerline project details
+      document.querySelector('.t-slider-text h3').textContent = project.title;
+      document.querySelector('#project-location').textContent = project.location;
+      document.querySelector('#project-description').textContent = project.description;
+      document.querySelector('#project-image').src = project.image;
+  }
+
+  function prevTProject() {
+      tCurrentProjectIndex = (tCurrentProjectIndex - 1 + tProjects.length) % tProjects.length;
+      updateTProject();
+  }
+
+  function nextTProject() {
+      tCurrentProjectIndex = (tCurrentProjectIndex + 1) % tProjects.length;
+      updateTProject();
+  }
+
+  // Event listeners
+  document.querySelector('.t-previous-btn').addEventListener('click', prevTProject);
+  document.querySelector('.t-next-btn').addEventListener('click', nextTProject);
+
+  // Initialize the Towerline slider
+  updateTProject();
+});
