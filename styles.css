@@ -235,6 +235,9 @@ video {
   padding: 10px;
   color: #252525;
 }
+.services a{
+  text-decoration: none;
+}
 
 .services{
   background-color: #171710;
@@ -689,7 +692,7 @@ video {
 }
 
 .c-projects-overlay {
-  background-color:#D1B780;
+  background-color:#C7C8CC;
   width: 100%;
   padding: 80px 20px;
   /* max-width: 1200px; */
@@ -714,7 +717,7 @@ video {
 }
 
 .c-slider-container {
-  background: #fcf2d6;
+  background: #FFDBDB;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0,0,0,0.15);
