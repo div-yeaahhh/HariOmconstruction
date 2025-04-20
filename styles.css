@@ -580,6 +580,7 @@ video {
   75% { background-image: url('cw.jpg'); }
 }
 
+
 /* }about section */
 .c-about {
   width: 100%;
@@ -898,7 +899,6 @@ video {
 
 /*TOWERLINE*/
 .tbg-container {
-  background-image: url(T3.jpg);
   background-size: cover; 
   background-position: center;
   background-attachment: fixed;
@@ -913,7 +913,7 @@ video {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  animation: c-slideshow 22s infinite;
+  animation: t-slideshow 22s infinite;
   /* opacity: 0.9; */
 }
 
@@ -948,7 +948,7 @@ video {
   color: #000000;
 }
 
-@keyframes c-slideshow {
+@keyframes t-slideshow {
   0%, 100% { background-image: url('T4.jpg'); }
   45% { background-image: url('T7.jpg'); }
   75% { background-image: url('T6.jpg'); }
