@@ -608,6 +608,7 @@ video {
   opacity: 0;
   transform: translateX(-50px);
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  margin-right: 24px;
 }
 
 .c-about-title {
@@ -633,6 +634,8 @@ video {
   opacity: 0;
   transform: translateX(50px);
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  margin-left: 24px;
+  flex: space-around;
 }
 
 .c-about-image-wrapper {
