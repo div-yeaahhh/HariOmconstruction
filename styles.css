@@ -949,9 +949,9 @@ video {
 }
 
 @keyframes t-slideshow {
-  0%, 100% { background-image: url('T4.jpg'); }
+  0%, 100% { background-image: url('T6.jpg'); }
   45% { background-image: url('T7.jpg'); }
-  75% { background-image: url('T6.jpg'); }
+  75% { background-image: url('T4.jpg'); }
 }
 
 /* about section */
