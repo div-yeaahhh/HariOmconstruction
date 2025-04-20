@@ -686,8 +686,10 @@ video {
 }
 
 .c-projects-overlay {
+  background-color:#D1B780;
+  width: 100%;
   padding: 80px 20px;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: auto;
   color: #252525;
   font-family: 'Segoe UI', sans-serif;
@@ -709,7 +711,7 @@ video {
 }
 
 .c-slider-container {
-  background: rgba(255, 255, 255, 0.8);
+  background: #fcf2d6;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0,0,0,0.15);
@@ -725,6 +727,7 @@ video {
 .c-slider-image {
   flex: 1;
   min-width: 300px;
+  border-radius: 12px;
 }
 
 .c-slider-image img {
@@ -732,6 +735,8 @@ video {
   height: 100%;
   object-fit: cover;
   display: block;
+  padding: 24px;
+  border-radius: 12px;
 }
 
 .c-slider-text {
