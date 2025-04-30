@@ -254,19 +254,91 @@ document.addEventListener('DOMContentLoaded', function () {
 //HYDRO POWERPLANT
 // h-hydropowerplant.js
 
-document.addEventListener('DOMContentLoaded', () => {
-  const elements = document.querySelectorAll('.h-fade-in');
+
+  const pText = `The hydropower plant project in Champawat, Uttarakhand, addresses a long-standing issue of frequent power outages in the region. For the past two decades, multiple attempts were made to establish a reliable hydropower system here, but all efforts either stalled or failed due to technical and structural challenges.
+
+However, a major breakthrough came when Hari Om Construction Company took charge of the project. With consistent effort, advanced planning, and the dedication of over six years, the company successfully built and commissioned the plant — finally bringing a stable, renewable source of electricity to Champawat. This plant now stands as a symbol of persistence, sustainable engineering, and regional empowerment.`;
+
+  let index = 0;
+  const element = document.getElementById("p-type-text");
+
+  function typeLine() {
+    if (index < pText.length) {
+      element.textContent += pText.charAt(index);
+      index++;
+      setTimeout(typeLine, 20);
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    element.textContent = "";
+    typeLine();
+  });
+
+  //history of PP
+  // JavaScript to add smooth scroll effect (if needed for page scroll effects)
+
+  const boxes = document.querySelectorAll('.p-box');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add('show');
       }
     });
-  }, {
-    threshold: 0.1
+  }, { threshold: 0.5 });
+
+  boxes.forEach(box => {
+    observer.observe(box);
   });
 
-  elements.forEach(el => observer.observe(el));
+
+  const cards = document.querySelectorAll('.p-card');
+
+  function revealCardsOnScroll() {
+    const triggerBottom = window.innerHeight * 0.9;
+
+    cards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+      if (cardTop < triggerBottom) {
+        card.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealCardsOnScroll);
+  window.addEventListener('load', revealCardsOnScroll);
+
+  //gallary section
+ // JS for Gallery Modal
+const openBtn = document.querySelector('.p-see-more-btn');
+const modal = document.getElementById('p-gallery-modal');
+const closeBtn = document.getElementById('p-close-gallery');
+
+openBtn.addEventListener('click', () => {
+  modal.style.display = 'block';
+  document.body.style.overflow = 'hidden';
 });
+
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto';
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+});
+
+
+
+
+
+
+
+
+
+
 

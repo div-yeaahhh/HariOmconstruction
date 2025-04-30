@@ -1,75 +1,153 @@
-<!-- hydropowerplant.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hydropowerplant Project</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Hydropowerplant Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+
 </head>
 <body>
-  <header class="h-hero">
-    <div class="h-overlay"></div>
-    <div class="h-hero-content">
-      <h1 class="h-fade-in">Hydropowerplant Project</h1>
-      <p class="h-fade-in h-delay">Empowering sustainability through innovation 💧⚡</p>
-    </div>
-  </header>
 
-  <main class="h-content">
-    <section class="h-section h-fade-in">
-      <h2>About the Powerplant</h2>
-      <p>Our hydropower project is a step towards clean and sustainable energy. Built with cutting-edge technology, this plant harnesses the power of water to generate electricity efficiently and eco-consciously.</p>
-    </section>
+  <!-- Hero Section -->
+  <div class="p-hero-section">
+    <h1 class="p-hero-heading">Welcome to Hydropowerplant</h1>
+  </div>
 
-    <section class="h-section h-fade-in h-delay">
-      <h2>History of the Powerplant</h2>
-      <p>The project began in [year], with planning and design phases leading into construction. Over time, it has become a landmark achievement in the region's renewable energy journey.</p>
-    </section>
-
-    <section class="h-section h-fade-in">
-      <h2>Location, Cost, and Duration</h2>
-      <ul>
-        <li><strong>Location:</strong> [Insert Location]</li>
-        <li><strong>Cost:</strong> [Insert Cost]</li>
-        <li><strong>Duration:</strong> [Insert Duration]</li>
-      </ul>
-    </section>
-
-    <section class="h-section h-fade-in h-delay">
-      <h2>Challenges Faced</h2>
-      <p>From difficult terrain to unpredictable weather, the project faced several hurdles. Innovative solutions and adaptive strategies helped overcome them successfully.</p>
-    </section>
-
-    <section class="h-section h-fade-in">
-      <h2>Techniques/Tech Used</h2>
-      <p>The plant employs turbine-driven generators, flow control systems, and AI-based monitoring to ensure optimal performance and safety.</p>
-    </section>
-
-    <section class="h-section h-fade-in h-delay">
-      <h2>Outcome & Benefits</h2>
-      <p>The project provides clean energy to thousands of homes, reduces carbon emissions, and creates local job opportunities. It stands as a model for future green energy initiatives.</p>
-    </section>
-
-    <section class="h-section h-fade-in">
-      <h2>Site Images</h2>
-      <div class="h-gallery">
-        <!-- Add your images below -->
-        <img src="image1.jpg" alt="Site Image 1">
-        <img src="image2.jpg" alt="Site Image 2">
-        <img src="image3.jpg" alt="Site Image 3">
+  <!-- About Section -->
+  <section class="p-about-section">
+    <div class="p-about-container">
+      <img src="your-image.jpg" alt="Powerplant Image" class="p-about-bg" />
+      <div class="p-about-overlay">
+        <div class="p-about-content">
+          <h2 class="p-about-heading">About Hydropower Plant</h2>
+          <p id="p-type-text"></p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
+  
 
-    <section class="h-section h-fade-in h-delay">
-      <h2>Learn More</h2>
-      <ul>
-        <li><a href="#">Official Hydropower Authority</a></li>
-        <li><a href="#">News Article on the Project</a></li>
-        <li><a href="#">Tech Behind Hydropower</a></li>
-      </ul>
-    </section>
-  </main>
+  <!--history of powerhouse-->
+  <section class="p-history-section">
+    <div class="p-history-container">
+      <h2 class="p-history-heading">History of Powerplant</h2>
+      <div class="p-history-content">
+        <p>The Champawat Powerhouse has been attempting to operate for the last 20 years, but every effort has unfortunately failed. Locals often recount an incident involving soldiers, where they allegedly met with an accident and were left without assistance. Some believe that the spirits of these soldiers still haunt the area, preventing the power plant from functioning properly.</p>
+        <p>Our company, however, faced significant challenges over the course of 4-5 years in an attempt to bring the plant to life. After extensive efforts, including conducting numerous grand rituals, prayers, and even restoring local temples, we finally succeeded in making the Champawat Powerhouse operational. This achievement is remarkable, as it is something that has eluded success for the past two decades.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--location budget and duration-->
+  <section class="p-info-section" id="infoSection">
+    <h2 class="p-section-title">Project Details</h2>
+    <div class="p-cards-container">
+      <div class="p-card"> 
+        <h3>Location</h3>
+        <p>Champawat District, Uttarakhand</p>
+      </div>
+      <div class="p-card">
+        <h3>Cost</h3>
+        <p>Estimated Budget: ₹120 Crores</p>
+      </div>
+      <div class="p-card">
+        <h3>Duration</h3>
+        <p>Completion Time: 5 Years of Continuous Effort</p>
+      </div>
+    </div>
+  </section>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hydropowerplant Gallery</title>
+  <link rel="stylesheet" href="p-gallery.css">
+</head>
+<body>
+
+  <!-- 🔷 GALLERY SECTION START -->
+  <section class="p-gallery-container">
+    <h2 class="p-gallery-heading">Hydropowerplant Site Gallery</h2>
+
+    <div class="p-gallery-preview">
+      <div class="p-gallery-image"><img src="PP1.jpg" alt="Site 1"></div>
+      <div class="p-gallery-image"><img src="PP2.jpg" alt="Site 2"></div>
+      <div class="p-gallery-image"><img src="PP3.jpg" alt="Site 3"></div>
+      <div class="p-gallery-image"><img src="PP4.jpg" alt="Site 4"></div>
+      <div class="p-gallery-image"><img src="PP5.jpg" alt="Site 5"></div>
+      <div class="p-gallery-image"><img src="PP6.jpg" alt="Site 6"></div>
+    </div>
+
+    <button class="p-see-more-btn">See More</button>
+  </section>
+
+  <!-- 🔷 FULL GALLERY MODAL -->
+  <div class="p-modal" id="p-gallery-modal">
+    <div class="p-modal-content">
+      <span class="p-close-modal" id="p-close-gallery">&times;</span>
+      <h2 class="p-modal-heading">Complete Site Gallery</h2>
+      <div class="p-gallery-full">
+        <img src="PP9.jpg" alt="Full 1">
+        <img src="PP10.jpg" alt="Full 2">
+        <img src="PP11.jpg" alt="Full 3">
+        <img src="PP12.jpg" alt="Full 4">
+        <img src="PP13.jpg" alt="Full 5">
+        <img src="PP14.jpg" alt="Full 6">
+        <img src="PP15.jpg" alt="Full 7">
+        <img src="PP16.jpg" alt="Full 8">
+        <img src="PP17.jpg" alt="Full 9">
+        <img src="PP18.jpg" alt="Full 3">
+        <img src="PP19.jpg" alt="Full 4">
+        <img src="PP20.jpg" alt="Full 5">
+        <img src="PP21.jpg" alt="Full 6">
+        <img src="PP22.jpg" alt="Full 7">
+        <img src="PP23.jpg" alt="Full 8">
+        <img src="PP24.jpg" alt="Full 9">
+        <!-- add more images -->
+      </div>
+    </div>
+  </div>
+
+  <!--External links section-->
+  <section class="p-external-links-section">
+    <div class="p-external-container">
+      <div class="p-external-left">
+        <h2 class="p-external-heading">External Links Related to the Project</h2>
+        <p class="p-external-subtext">Here are the official resources and pages where more about the hydropower project is available.</p>
+      </div>
+      <div class="p-external-right">
+        <div class="p-external-links">
+          <a href="https://www.amarujala.com/uttarakhand/champawat/hariom-construction-company-of-dehradun-will-operate-gaudi-power-house-champawat-news-hld4127773143" target="_blank">Amar ujala</a>
+          <a href="https://www.amarujala.com/uttarakhand/champawat/godi-powerhouse-in-champawat-champawat-news-c-229-1-shld1009-3356-2023-11-15" target="_blank">33 साल बाद गौड़ी पावर हाउस में बनेगी बिजली</a>
+          <a href="https://www.jagran.com/uttarakhand/nainital-private-company-will-operate-gaudi-power-house-of-champawat-21332927.html" target="_blank">jagran</a>
+          <a href="https://www.livehindustan.com/uttarakhand/champawat/story-gaudi-power-house-will-produce-electricity-after-three-decades-9312816.html" target="_blank">Hindustan</a>
+        </div>
+        <div class="p-dark-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="t-footer">
+    <p class="t-footer-text">"EXPLORE MORE ABOUT US ON OUR MAIN WEBSITE"</p>
+    <a href="homepage.html" class="t-footer-button">Visit Main Website</a>
+  </footer>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
   <script src="main.js"></script>
 </body>
